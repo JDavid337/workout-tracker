@@ -38,8 +38,8 @@ router.get("/api/workouts/range", (req, res) => {
     ])
         .sort({ _id: -1})
         .limit(7)
-        .then((dbWorkouts) => {
-            res.json(dbWorkouts)
+        .then(dbWorkouts => {
+            res.json(dbWorkouts);
         })
     .catch(err => {
         res.status(400).json(err);
